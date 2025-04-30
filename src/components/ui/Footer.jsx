@@ -12,7 +12,7 @@ export default function Footer() {
     <div className="container mx-auto my-auto">
       <div className="flex justify-between items-center py-20">
         <div className="cursor-pointer">
-          <img className="w-36 h-9" src={Logo} alt="techBlog Logo" />
+          <img className="w-52 h-9" src={Logo} alt="techBlog Logo" />
         </div>
         <div className="font-apercu text-sm flex cursor-pointer">
           <div className="px-3 hover:underline">Author</div>
@@ -38,7 +38,7 @@ export default function Footer() {
       <div className="flex justify-center items-center pb-20">
         <div className="font-apercu text-sm cursor-pointer ">
           <div className="px-3 underline cursor-text text-center">
-            @Copyright techBlog 2025 || Develop By{" "}
+            @Copyright Backend Stories 2025 || Develop By{" "}
             <a
               className="text-[#444BFF]"
               target="_blank"

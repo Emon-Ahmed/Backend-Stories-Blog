@@ -5,9 +5,9 @@ import { Link } from "react-router";
 export default function Header() {
   return (
     <div className="container mx-auto my-auto">
-      <div className="flex justify-between items-center py-6">
+      <div className="flex justify-around items-center py-6">
         <div className="cursor-pointer">
-          <img className="w-36 h-9" src={Logo} alt="techBlog Logo" />
+          <img className="w-52 h-9" src={Logo} alt="techBlog Logo" />
         </div>
         <div className="font-apercu text-sm flex cursor-pointer">
           <div className="px-7 hover:underline">Home</div>

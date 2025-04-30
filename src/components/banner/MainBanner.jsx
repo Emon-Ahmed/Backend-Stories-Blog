@@ -17,11 +17,12 @@ export default function MainBanner() {
                 <div className="mx-0.5">Blog</div>
                 <img src={aiIcon} alt="AI Icon" className="w-4 h-4 mx-0.5" />
               </div>
-              <div className="text-6xl  font-bold py-4">News and insights</div>
+              <div className="text-6xl  font-bold py-4">
+                Backend and Stories
+              </div>
               <div className="w-1/2 mx-auto text-lg text-[#111111]/60">
-                Learn about cryptocurrency, NFTs, and blockchain, discover our
-                latest product updates, partnership announcements, user stories,
-                and more.
+                Tech talks, dev journeys, and real backend lessons. Read stories
+                that help you grow as a backend developer.
               </div>
             </div>
             <div>

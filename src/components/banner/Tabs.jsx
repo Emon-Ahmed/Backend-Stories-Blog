@@ -13,12 +13,13 @@ export default function Tabs() {
       >
         View all
       </div>
-      <Tab text="Crypto" active={active} setActive={setActive} />
-      <Tab text="Blockchain" active={active} setActive={setActive} />
-      <Tab text="Announcements" active={active} setActive={setActive} />
-      <Tab text="People" active={active} setActive={setActive} />
-      <Tab text="Engineering" active={active} setActive={setActive} />
-      <Tab text="NFT" active={active} setActive={setActive} />
+      <Tab text="NodeJS" active={active} setActive={setActive} />
+      <Tab text="ExpressJS" active={active} setActive={setActive} />
+      <Tab text="NestJS" active={active} setActive={setActive} />
+      <Tab text="Golang" active={active} setActive={setActive} />
+      <Tab text="MongoDB" active={active} setActive={setActive} />
+      <Tab text="PostgreSQL" active={active} setActive={setActive} />
+      <Tab text="MySQL" active={active} setActive={setActive} />
     </div>
   );
 }
