@@ -7,6 +7,7 @@ import SignUpForm from "./components/auth/SignUpForm";
 import Blogs from "./pages/Blogs";
 import Categories from "./pages/Categories";
 import Authors from "./pages/Authors";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blog/:id" element={<Blog />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/authors" element={<Authors />} />
         <Route path="/blogs" element={<Blogs />} />

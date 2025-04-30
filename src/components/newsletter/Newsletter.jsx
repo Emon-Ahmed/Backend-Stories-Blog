@@ -21,14 +21,14 @@ export default function Newsletter() {
             <div className="col-span-6 md:col-span-5 py-10 md:py-20 ">
               <div className="text-sm pb-4">Sign up to our newsletter ↓</div>
               <div>
-                <form class="max-w-sm ">
-                  <div class="flex">
+                <form className="max-w-sm ">
+                  <div className="flex">
                     <input
                       type="text"
-                      class="rounded-s bg-[#F5F8FB] border border-[#111]/10 text-[#111] block flex-1 min-w-0 w-full text-sm p-2.5  focus:outline-none focus:ring-0"
+                      className="rounded-s bg-[#F5F8FB] border border-[#111]/10 text-[#111] block flex-1 min-w-0 w-full text-sm p-2.5  focus:outline-none focus:ring-0"
                       placeholder="Enter your email"
                     />
-                    <span class="cursor-pointer inline-flex items-center px-4 py-1 text-sm text-white bg-[#444BFF] border border-e-0 border-[#444BFF] rounded-e">
+                    <span className="cursor-pointer inline-flex items-center px-4 py-1 text-sm text-white bg-[#444BFF] border border-e-0 border-[#444BFF] rounded-e">
                       Subscribe
                     </span>
                   </div>
