@@ -10,7 +10,9 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center relative">
         {/* Logo (Left) */}
         <div className="flex-shrink-0">
-          <img className="w-40 h-8" src={Logo} alt="techBlog Logo" />
+          <Link to="/">
+            <img className="w-40 h-8" src={Logo} alt="techBlog Logo" />
+          </Link>
         </div>
 
         {/* Mobile Menu Button (Hidden on md+) */}
@@ -53,11 +55,11 @@ export default function Header() {
           <Link to="/blogs" className="hover:underline">
             Blogs
           </Link>
-          <Link to="/category" className="hover:underline">
-            Category
+          <Link to="/categories" className="hover:underline">
+            Categories
           </Link>
-          <Link to="/author" className="hover:underline">
-            Author
+          <Link to="/authors" className="hover:underline">
+            Authors
           </Link>
         </div>
 
