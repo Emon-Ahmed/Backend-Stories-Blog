@@ -15,7 +15,7 @@ export default function Home() {
       <FeaturedBlog />
       <div className="bg-[#FAFBFC] ">
         <div className="container mx-auto my-auto ">
-          <div className="grid grid-cols-3  gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-8">
             <BlogCard
               category="Blockchain"
               readTime="5 min read"

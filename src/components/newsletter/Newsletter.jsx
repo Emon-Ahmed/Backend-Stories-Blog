@@ -6,17 +6,19 @@ export default function Newsletter() {
     <div className="bg-[#FAFBFC] font-apercu">
       <div className="container mx-auto my-auto">
         <div className="py-8">
-          <div className=" grid grid-cols-12 bg-white  rounded border border-[#111]/10 ">
+          <div className="px-2 lg:px-0 grid grid-cols-12 bg-white  rounded border border-[#111]/10 ">
             <div
-              className="col-span-7 bg-no-repeat bg-cover bg-left py-20 ps-20"
+              className="col-span-6 md:col-span-7 bg-no-repeat bg-cover bg-left py-10 md:py-20 lg:ps-20"
               style={{ backgroundImage: `url(${NewsletterBG})` }}
             >
-              <div className="font-bold text-4xl">Stay up to date !</div>
-              <div className="text-xl my-4">
+              <div className="font-bold text-2xl md:text-4xl">
+                Stay up to date !
+              </div>
+              <div className="text-sm md:text-xl my-4">
                 Subscribe to our newsletter to get inbox notifications.
               </div>
             </div>
-            <div className="col-span-5 py-20 ">
+            <div className="col-span-6 md:col-span-5 py-10 md:py-20 ">
               <div className="text-sm pb-4">Sign up to our newsletter ↓</div>
               <div>
                 <form class="max-w-sm ">

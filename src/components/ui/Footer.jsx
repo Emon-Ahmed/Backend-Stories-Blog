@@ -9,56 +9,58 @@ import {
 
 export default function Footer() {
   return (
-    <div className="container mx-auto my-auto">
-      <div className="flex justify-between items-center py-20">
+    <div className="container mx-auto px-4">
+      <div className="flex flex-col md:flex-row justify-between items-center py-10 gap-6 md:gap-0">
+        {/* Logo */}
         <div className="cursor-pointer">
-          <img className="w-52 h-9" src={Logo} alt="techBlog Logo" />
+          <img
+            className="w-72 md:w-40 md:h-8 h-12"
+            src={Logo}
+            alt="techBlog Logo"
+          />
         </div>
-        <div className="font-apercu text-sm flex cursor-pointer">
-          <div className="px-3 hover:underline">Author</div>
-          <div className="px-3 hover:underline">Blogs</div>
-          <div className="px-3 hover:underline">Category</div>
+
+        {/* Simple Nav Links */}
+        <div className="flex flex-wrap justify-center text-sm font-apercu">
+          <div className="px-2 hover:underline cursor-pointer">Author</div>
+          <div className="px-2 hover:underline cursor-pointer">Blogs</div>
+          <div className="px-2 hover:underline cursor-pointer">Category</div>
         </div>
-        <div className="font-apercu text-sm flex items-center cursor-pointer">
-          <div className="px-1">
-            <RiFacebookFill />
-          </div>
-          <div className="px-1">
-            <RiInstagramLine />
-          </div>
-          <div className="px-1">
-            <RiTwitterFill />
-          </div>
-          <div className="px-1">
-            <RiLinkedinBoxFill />
-          </div>
+
+        {/* Social Icons */}
+        <div className="flex space-x-3">
+          <RiFacebookFill className="w-5 h-5 cursor-pointer" />
+          <RiInstagramLine className="w-5 h-5 cursor-pointer" />
+          <RiTwitterFill className="w-5 h-5 cursor-pointer" />
+          <RiLinkedinBoxFill className="w-5 h-5 cursor-pointer" />
         </div>
       </div>
-      <hr class="h-px my-8 bg-[#111]/10 border-0 " />
-      <div className="flex justify-center items-center pb-20">
-        <div className="font-apercu text-sm cursor-pointer ">
-          <div className="px-3 underline cursor-text text-center">
-            @Copyright Backend Stories 2025 || Develop By{" "}
-            <a
-              className="text-[#444BFF]"
-              target="_blank"
-              href="https://emonahmed.xyz/"
-            >
-              Emon
-            </a>{" "}
-            || UI Design By{" "}
-            <a
-              className="text-[#444BFF]"
-              target="_blank"
-              href="https://www.figma.com/community/file/1197824063891898115"
-            >
-              Antoine Piedanna (Figma Community)
-            </a>
-          </div>
-          {/* <div className="px-3 underline">Privacy Policy</div> */}
-          {/* <div className="px-3 underline">Terms of Service</div> */}
-          {/* <div className="px-3 underline">Cookies Settings</div> */}
-        </div>
+
+      {/* Divider */}
+      <hr className="h-px my-6 bg-[#111]/10 border-0" />
+
+      {/* Copyright */}
+      <div className="text-center text-sm font-apercu pb-10 px-4">
+        <p>
+          © Backend Stories 2025 || Developed by{" "}
+          <a
+            className="text-[#444BFF]"
+            href="https://emonahmed.xyz/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Emon
+          </a>{" "}
+          || UI Design by{" "}
+          <a
+            className="text-[#444BFF]"
+            href="https://www.figma.com/community/file/1197824063891898115"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Antoine Piedanna (Figma Community)
+          </a>
+        </p>
       </div>
     </div>
   );
