@@ -3,7 +3,7 @@ import BannerBG from "../../assets/images/banner-bg.png";
 import aiIcon from "../../assets/images/ai.svg";
 import Tabs from "./Tabs";
 
-export default function MainBanner() {
+export default function MainBanner({ setSelectedCategory }) {
   return (
     <div className="bg-[#FAFBFC]">
       <div
@@ -26,7 +26,7 @@ export default function MainBanner() {
               </div>
             </div>
             <div>
-              <Tabs />
+              <Tabs onTabChange={setSelectedCategory} />
             </div>
           </div>
         </div>
