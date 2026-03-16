@@ -8,21 +8,51 @@ import Newsletter from "../components/newsletter/Newsletter";
 import Footer from "../components/ui/Footer";
 import { Link } from "react-router";
 import { useGetBlogsQuery } from "../features/blogs/blogsApi";
+import HomePageSkeleton from "../components/skeleton/HomePageSkeleton";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("View all");
-  const { data, isLoading, isError } = useGetBlogsQuery();
+  const { data, isLoading, isError, refetch, isFetching } = useGetBlogsQuery();
+  const blogs = Array.isArray(data?.data) ? data.data : [];
 
-  if (isLoading) return <div>Loading blogs...</div>;
-  if (isError) return <div>Error loading blogs</div>;
+  if ((isLoading || isFetching) && blogs.length === 0) {
+    return <HomePageSkeleton />;
+  }
+  if (isError && blogs.length === 0) {
+    return (
+      <>
+        <Header />
+        <MainBanner setSelectedCategory={setSelectedCategory} />
+        <div className="bg-[#FAFBFC]">
+          <div className="container mx-auto py-16 font-apercu text-center">
+            <div className="text-2xl md:text-3xl font-bold text-[#111111]">
+              Unable to load blogs right now
+            </div>
+            <div className="mt-3 text-sm md:text-base text-[#111111]/60">
+              The blog server is temporarily unavailable. Please try again.
+            </div>
+            <button
+              type="button"
+              onClick={refetch}
+              className="mt-6 text-white bg-[#444BFF] py-3 px-8 rounded cursor-pointer"
+            >
+              Retry
+            </button>
+          </div>
+        </div>
+        <Newsletter />
+        <Footer />
+      </>
+    );
+  }
 
   const filteredBlogs =
     selectedCategory === "View all"
-      ? [...data.data]
-      : data.data.filter((blog) => blog.categories?.name === selectedCategory);
+      ? [...blogs]
+      : blogs.filter((blog) => blog.categories?.name === selectedCategory);
 
   const sortedBlogs = filteredBlogs.sort(
-    (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+    (a, b) => new Date(b.createdAt) - new Date(a.createdAt),
   );
 
   const featuredBlog = sortedBlogs[0];

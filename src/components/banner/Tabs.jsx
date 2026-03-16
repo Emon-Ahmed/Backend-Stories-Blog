@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import Tab from "./Tab";
 import { useGetCategoryQuery } from "../../features/blogs/blogsApi";
+import TabsSkeleton from "../skeleton/TabsSkeleton";
 
 export default function Tabs({ onTabChange }) {
   const [activeTab, setActiveTab] = useState("View all");
-  const { data, isLoading } = useGetCategoryQuery();
+  const { data, isLoading, isError } = useGetCategoryQuery();
+  const categories = Array.isArray(data?.data) ? data.data : [];
 
-  if (isLoading) {
-    return "Loading Data...";
+  if (isLoading || (!isError && !Array.isArray(data?.data))) {
+    return <TabsSkeleton />;
   }
 
   const handleTabClick = (tabName) => {
@@ -30,7 +32,7 @@ export default function Tabs({ onTabChange }) {
         View all
       </div>
 
-      {data.data.map((category, index) => (
+      {categories.map((category, index) => (
         <Tab
           text={category.name}
           key={category.id || index}
