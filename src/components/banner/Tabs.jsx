@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Tab from "./Tab";
-import { useGetCategoryQuery } from "../../features/blogs/blogsApi";
+import { useGetCategoriesQuery } from "../../features/blogs/blogsApi";
 import TabsSkeleton from "../skeleton/TabsSkeleton";
 
 export default function Tabs({ onTabChange }) {
   const [activeTab, setActiveTab] = useState("View all");
-  const { data, isLoading, isError } = useGetCategoryQuery();
+  const { data, isLoading, isError } = useGetCategoriesQuery();
   const categories = Array.isArray(data?.data) ? data.data : [];
 
   if (isLoading || (!isError && !Array.isArray(data?.data))) {

@@ -7,7 +7,7 @@ export default function Auth() {
   return (
     <div className="min-h-screen flex relative">
       <Link to="/" className="absolute top-4 left-8 cursor-pointer">
-        <img src={Logo} alt="Logo" className="w-36 h-9" />
+        <img src={Logo} alt="Logo" className="w-40 h-8" />
       </Link>
 
       <div className="flex flex-1">

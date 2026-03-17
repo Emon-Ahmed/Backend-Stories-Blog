@@ -95,18 +95,18 @@ export default function Header() {
                 Blogs
               </Link>
               <Link
-                to="/category"
+                to="/categories"
                 className="hover:underline"
                 onClick={() => setIsOpen(false)}
               >
-                Category
+                Categories
               </Link>
               <Link
-                to="/author"
+                to="/authors"
                 className="hover:underline"
                 onClick={() => setIsOpen(false)}
               >
-                Author
+                Authors
               </Link>
               <hr className="h-px my-6 bg-[#111]/10 border-0" />
               <Link

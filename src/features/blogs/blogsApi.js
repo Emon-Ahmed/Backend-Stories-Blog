@@ -8,18 +8,26 @@ export const blogsApi = apiSlice.injectEndpoints({
     getBlog: builder.query({
       query: (id) => `/api/blogs/${id}`,
     }),
-    getCategory: builder.query({
+    getCategories: builder.query({
       query: () => "/api/categories",
     }),
-    getAuthor: builder.query({
+    getCategory: builder.query({
+      query: (id) => `/api/categories/${id}`,
+    }),
+    getAuthors: builder.query({
       query: () => "/api/authors",
+    }),
+    getAuthor: builder.query({
+      query: (id) => `/api/authors/${id}`,
     }),
   }),
 });
 
 export const {
   useGetBlogsQuery,
+  useGetAuthorsQuery,
   useGetAuthorQuery,
+  useGetCategoriesQuery,
   useGetCategoryQuery,
   useGetBlogQuery,
 } = blogsApi;
